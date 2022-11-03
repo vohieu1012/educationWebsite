@@ -1,0 +1,52 @@
+.header {
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px;
+    height: 53px;
+    box-sizing: border-box;
+    
+}
+
+.header .header--left {
+    width: 200px;
+    display: flex;
+}
+.header .header--left .header--left__title p {
+    font-size: 20px;
+    font-size: 700;
+}
+.header .header--right {
+    display: flex;
+    align-items: center;
+    
+}
+.header .header--right .header__right__notification img {
+    width: 32px;
+    height: 32px;
+}
+.header .header--right .header--right__account {
+    display: flex;
+    align-items: center;
+}
+.header .header--right .header--right__space {
+    content: "";
+    width: 1px;
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: black;
+}
+
+.header .header--right .header--right__account div:not(:first-child) {
+    margin-left: 16px;
+}
+.header .header--right .header--right__account .account--image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.header .header--right .header--right__account button {
+    border: unset;
+}

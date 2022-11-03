@@ -1,0 +1,37 @@
+.main--paging {
+    height: 56px;
+    width: calc(100% - 220px);
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.main--paging ul {
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+}
+.main--paging ul li {
+    display: block;
+}
+
+.main--paging ul .paging--number img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.main--paging ul .paging--pos {
+    width: 60px;
+    height: 25px;
+    border: 1px solid #d5d8e6;
+    border-radius: 4px;
+    text-align: center;
+}
+.main--paging ul .paging--quantity {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
