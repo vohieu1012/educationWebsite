@@ -1,11 +1,21 @@
 $(document).ready(function () {
     $(".main--right__add").click(function () {
-        $(".toastmsg").show().delay(3000).fadeOut(1000);;
-    });
-    generateToast("warning");
+        $(".toastmsg").show().delay(5000).fadeOut(1000);
+        generateToastLink("success");
+        removeToast();
+    })
+
+    // generateToastLink("success");
+    // removeToast();
+    // let count =0;
+    // setTimeout(function(){
+    //     $(".toastmsg").show().delay(5000);
+    // },5000);
+
 
 })
 function generateToast(type) {
+
     let color_status = $(".toastmsg--color");
     let status = $(".title--status");
     let content_status = $(".content--status");
@@ -44,5 +54,21 @@ function generateToast(type) {
                 $('<img>', { src: '/assets/Icons/ic_ToastMessage_Info.png' })
             );
             break;
+
     }
+}
+function generateToastLink(type) {
+    $(".wraptoast").append('<div class="toastmsg--close"></div>');
+    $(".toastmsg--close").prepend(
+        $('<img>', { src: './assets/Icons/ic_X_40.png' })
+    );
+    generateToast(type);
+
+}
+function removeToast() {
+
+    $(".toastmsg--close").click(function () {
+        $(".toastmsg").show().fadeOut(1000);
+    });
+
 }
